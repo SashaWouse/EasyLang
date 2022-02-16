@@ -1,1 +1,2 @@
-EasyLang an application that helps to learn new vocabulary in other languages by scanning images.
+#EasyLang 
+###an application that helps to learn new vocabulary in other languages by scanning images.

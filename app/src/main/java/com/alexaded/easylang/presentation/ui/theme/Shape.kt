@@ -1,4 +1,4 @@
-package com.alexaded.easylang.ui.theme
+package com.alexaded.easylang.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

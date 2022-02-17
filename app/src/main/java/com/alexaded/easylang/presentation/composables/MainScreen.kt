@@ -1,4 +1,4 @@
-package com.alexaded.easylang.composables
+package com.alexaded.easylang.presentation.composables
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

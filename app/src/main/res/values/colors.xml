@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+    <!-- Custom colors -->
+    <color name="primaryColor">#b388ff</color>
+    <color name="primaryLightColor">#e7b9ff</color>
+    <color name="primaryDarkColor">#805acb</color>
+    <color name="secondaryColor">#ab47bc</color>
+    <color name="secondaryLightColor">#df78ef</color>
+    <color name="secondaryDarkColor">#790e8b</color>
+    <color name="primaryTextColor">#1E1E1E</color>
+    <color name="secondaryTextColor">#eeeeee</color>
+
+
+    <!-- Default colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

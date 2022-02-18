@@ -19,13 +19,13 @@ import androidx.compose.ui.unit.sp
 
 @Preview(showBackground = true)
 @Composable
-fun MainScreen() {
+fun MainScreenView() {
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
-//                    Text(text = stringResource(R.string.app_name), fontSize = 24.sp)
+                    //Text(text = stringResource(id = R.string.app_name), fontSize = 24.sp)
                     Text(text = "EasyLang", fontSize = 24.sp)
                 },
                 actions = {
@@ -52,7 +52,7 @@ fun BodyContent(modifier: Modifier = Modifier) {
 @Composable
 fun LazyGrid(onClickStartSource : () -> Unit) {
 
-    val data = listOf("Lang 1", "Lang 2", "Lang 3", "Lang 4", "Lang 5")
+    val data = listOf("Eng", "Rus", "Fin", "Fr", "Swe")
 
     LazyVerticalGrid(
         cells = GridCells.Adaptive(160.dp),
@@ -66,7 +66,7 @@ fun LazyGrid(onClickStartSource : () -> Unit) {
                 backgroundColor = androidx.compose.ui.graphics.Color.Gray,
                 onClick = {onClickStartSource}
             ) {
-                // Some img
+                // Some flag img
             }
         }
     }

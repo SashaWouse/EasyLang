@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.alexaded.easylang.presentation.composables.MainScreen
+import com.alexaded.easylang.presentation.composables.MainScreenView
 import com.alexaded.easylang.presentation.ui.theme.EasyLangTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,14 +17,14 @@ class MainActivity : ComponentActivity() {
             EasyLangTheme {
 
                 val windows = this.window
-//                windows.statusBarColor = Color.PrimaryColor
+                //windows.statusBarColor = Color.White
 
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.primary
                 ) {
-                   MainScreen()
+                   MainScreenView()
                 }
             }
         }

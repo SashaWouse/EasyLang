@@ -1,23 +1,30 @@
 package com.alexaded.easylang.presentation
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode.Companion.Color
+import com.alexaded.easylang.R
 import com.alexaded.easylang.presentation.composables.MainScreenView
 import com.alexaded.easylang.presentation.ui.theme.EasyLangTheme
 
+@ExperimentalFoundationApi
 class MainActivity : ComponentActivity() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             EasyLangTheme {
 
-                val windows = this.window
-                //windows.statusBarColor = Color.White
+//                IT DOESN'T WORK!
+//                val windows = this.window
+//                windows.statusBarColor =  R.color.primaryColor
 
                 // A surface container using the 'background' color from the theme
                 Surface(

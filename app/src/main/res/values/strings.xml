@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EasyLang</string>
+    <string name="card_title">Finnish</string>
+    <string name="card_disc">Jetpack Compose</string>
 </resources>

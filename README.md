@@ -7,5 +7,4 @@ an application that helps to learn new vocabulary in other languages by scanning
 2. Jetpack Compose
 3. MVVM
 4. Retrofit
-5. Augmented Reality module
-6. Translate API
+5. ML Kit API

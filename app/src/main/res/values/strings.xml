@@ -2,4 +2,7 @@
     <string name="app_name">EasyLang</string>
     <string name="card_title">Finnish</string>
     <string name="card_disc">Jetpack Compose</string>
+    <string name="main_title">Choose the language</string>
+    <string name="progress_title">Your progress</string>
+    <string name="scan">Start to scan</string>
 </resources>

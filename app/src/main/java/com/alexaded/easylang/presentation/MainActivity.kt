@@ -17,10 +17,13 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.core.app.ActivityCompat
+import com.alexaded.easylang.Navigation
+import com.alexaded.easylang.presentation.composables.ProgressScreenView
 import com.alexaded.easylang.presentation.ui.theme.EasyLangTheme
 
 private const val REQUEST_FOREGROUND_ONLY_PERMISSION_REQUEST = 34
 
+// permission for Camera
 private fun foregroundPermissionApproved(context: Context): Boolean {
     return PackageManager.PERMISSION_GRANTED == ActivityCompat.checkSelfPermission(
         context, android.Manifest.permission.CAMERA
@@ -60,8 +63,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.primary
                 ) {
                     requestForegroundPermission(this@MainActivity)
-                   //MainScreenView()
-                   MLKitTextRecognition()
+                    Navigation()
                 }
             }
         }

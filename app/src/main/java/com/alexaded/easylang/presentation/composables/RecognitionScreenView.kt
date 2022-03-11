@@ -20,7 +20,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import androidx.navigation.NavController
 import com.alexaded.easylang.presentation.ObjectDetectorImageAnalyzer
+import com.google.mlkit.nl.languageid.LanguageIdentification
 import com.google.mlkit.vision.text.TextRecognition
 import java.util.concurrent.Executors
 
@@ -28,7 +30,7 @@ import java.util.concurrent.Executors
 fun RecognitionScreenView(
     context: Context,
     lifecycleOwner: LifecycleOwner,
-    extractedText: MutableState<String>
+    extractedText: MutableState<String>,
 ) {
     val cameraProviderFuture = remember { ProcessCameraProvider.getInstance(context) }
     var preview by remember { mutableStateOf<Preview?>(null) }
@@ -36,6 +38,7 @@ fun RecognitionScreenView(
     val cameraProvider = cameraProviderFuture.get()
     val textRecognizer = remember { TextRecognition.getClient() }
     val cameraExecutor = remember { Executors.newSingleThreadExecutor() }
+    val langRecognition = remember { LanguageIdentification.getClient() }
 
     Box {
         AndroidView(
@@ -86,5 +89,6 @@ fun RecognitionScreenView(
                 )
             }
         }
+
     }
 }

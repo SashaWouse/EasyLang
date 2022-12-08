@@ -6,5 +6,5 @@ import com.example.easylang.repository.AuthRepository
 class LoginViewModel(
     private val repository: AuthRepository = AuthRepository()
 ):ViewModel() {
-    
+
 }

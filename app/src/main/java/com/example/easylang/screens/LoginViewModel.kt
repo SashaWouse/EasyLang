@@ -84,6 +84,37 @@ class LoginViewModel(
         }
     }
 
+    fun loginUser(context: Context) = viewModelScope.launch {
+        try {
+            if (!validateLoginForm()) {
+                throw IllegalArgumentException("Email and password can not be empty!")
+            }
+            loginUiState = loginUiState.copy(isLoading = true)
+
+            loginUiState = loginUiState.copy(loginError = null)
+            repository.logIn(
+                loginUiState.userName,
+                loginUiState.userPassword
+            ){
+                    isSuccessful ->
+                if (isSuccessful) {
+                    Toast.makeText(context, "Success Login", Toast.LENGTH_SHORT).show()
+                    loginUiState = loginUiState.copy(isSuccessLogin = true)
+                } else {
+                    Toast.makeText(context, "Failed Login", Toast.LENGTH_SHORT).show()
+                    loginUiState = loginUiState.copy(isSuccessLogin = false)
+                }
+            }
+
+
+        } catch (e:Exception){
+            loginUiState = loginUiState.copy(loginError = e.localizedMessage)
+            e.printStackTrace()
+        } finally {
+            loginUiState = loginUiState.copy(isLoading = false)
+        }
+    }
+
 }
 
 data class LoginUiState(
